@@ -51,7 +51,7 @@ Se optó por no graficar los resultados en un diagrama, sino imprimir los cluste
 | 6 | No se observaron patrones      | - |
 | 7 | Meses - Palabras en inglés    | (enero, febrero, marzo, junio, julio, agosto, septiembre, octubre, noviembre), (time, age, country, down, state, stock, line, web) |
 | 8 | Palabras compuestas o con prefijos  | (inhabilitado, inmunoprevenibles, frutihortícola, acéfalo, despegados, desconfiados, interempresarial, incontrolables, reincorporado) |
-| 9 | Ambientalismo - Relativo al Peronismo |(megaminería, polución, glifosato, desmontes, hídrico), (De la Sota, Schiaretti, FPV, Peronismo, Urtubey, Alperovich, Carlotto, Bonafini, justicialista, kirchnerista) |
+| 9 | Ambientalismo - Relativo al Peronismo |(megaminería, polución, glifosato, desmontes, hídrico), ((De la) Sota, Schiaretti, FPV, Peronismo, Urtubey, Alperovich, Carlotto, Bonafini, justicialista, kirchnerista) |
 
 
 ## Conclusión
