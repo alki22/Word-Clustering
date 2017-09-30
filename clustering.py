@@ -1,4 +1,3 @@
-
 from __future__ import print_function
 import sys
 import nltk
@@ -26,7 +25,7 @@ vect_to_string = {}
 index = 0
 for token in parsedData:
     # Clean the corpus out of stopwords and non alphabetic tokens
-    if token.orth_.isalpha() and token.lower_ not in stopwords:
+    if token.orth_.isalpha() and token.lower() not in stopwords:
         token_features = {
                         'lemma' : token.lemma, 
                         'log probability' : token.prob, 'POS tag' : token.pos,
@@ -40,12 +39,13 @@ vectorizer = DictVectorizer()
 vectors = vectorizer.fit_transform(corpus)
 
 # Run K-Means algorithm
-k_clusters = 30
+k_clusters = 15
 km = KMeans(n_clusters=k_clusters, init='k-means++', n_jobs=-1)
 X = km.fit(vectors)
 
 # Save results to avoid running the script every time
 joblib.dump(km,  'doc_cluster.pkl')
+
 clusters = defaultdict(list)
 
 # Put every word's index into its cluster
@@ -55,7 +55,6 @@ for j in range(len(vect_to_string)):
 # Print results to output.txt
 for j in range(len(clusters)):  
     print('Cluster', j, file=open("output.txt", "a"))
-    print('==========================', file=open("output.txt", "a"))
     for k in clusters[j]:
             print(vect_to_string[k], file=open("output.txt", "a"))
 
